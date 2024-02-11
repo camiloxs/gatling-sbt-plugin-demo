@@ -8,7 +8,7 @@ import scala.collection.mutable._
 
 class Prices extends Simulation {
 
-  private val httpProtocol = http.baseUrl("https://www.investing.com")
+  private val httpProtocol = http.baseUrl("https://finance.yahoo.com")
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8") // Here are the common headers
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
@@ -22,16 +22,17 @@ class Prices extends Simulation {
   val outputWriter: BufferedWriter = new BufferedWriter(new FileWriter(outputFile.toFile))
 
   private val priceTable: ArrayBuffer[Map[String, Any]] = new ArrayBuffer()
-  private val inputDateFormat = new java.text.SimpleDateFormat("MM/dd/yyyy")
+  private val inputDateFormat = new java.text.SimpleDateFormat("MMM dd, yyyy")
   private val outputDateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd")
 
   private val scn = scenario("Look for last price")
     .feed(urls)
     .exec(http("Load Page")
       .get("/#{url}")
-      .check(css("table.w-full > tbody")
+      .check(css("table.W\\(100\\%\\) > tbody")
         .ofType[Node]
         .saveAs("table")))
+    .exitHereIfFailed
     .exec { session =>
       val table = session("table").as[Node]
       val order = session("order").as[Int]
@@ -39,7 +40,7 @@ class Prices extends Simulation {
 
       table.getChildElements.foreach { tableRow =>
         val date = tableRow.getChildElement(0).getTextContent
-        val lastPrice = tableRow.getChildElement(1).getTextContent
+        val lastPrice = tableRow.getChildElement(4).getTextContent
           .replace(",", "")
 
         val row = Map(
@@ -55,7 +56,7 @@ class Prices extends Simulation {
       session
     }
 
-  setUp(scn.inject(atOnceUsers(22)).protocols(httpProtocol))
+  setUp(scn.inject(atOnceUsers(24)).protocols(httpProtocol))
 
   after {
     priceTable
