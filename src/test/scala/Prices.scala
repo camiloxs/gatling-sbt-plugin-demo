@@ -56,7 +56,7 @@ class Prices extends Simulation {
       session
     }
 
-  setUp(scn.inject(atOnceUsers(24)).protocols(httpProtocol))
+  setUp(scn.inject(atOnceUsers(26)).protocols(httpProtocol))
 
   after {
     priceTable
