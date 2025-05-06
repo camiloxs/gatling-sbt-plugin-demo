@@ -29,7 +29,7 @@ class Prices extends Simulation {
     .feed(urls)
     .exec(http("Load Page")
       .get("/#{url}")
-      .check(css("table.W\\(100\\%\\) > tbody")
+      .check(css("table > tbody")
         .ofType[Node]
         .saveAs("table")))
     .exitHereIfFailed
@@ -43,6 +43,7 @@ class Prices extends Simulation {
         val lastPrice = tableRow.getChildElement(4).getTextContent
           .replace(",", "")
 
+        //println(s"»»»»$date | $symbol")
         val row = Map(
           "date" -> date,
           "symbol" -> symbol,
@@ -56,9 +57,10 @@ class Prices extends Simulation {
       session
     }
 
-  setUp(scn.inject(atOnceUsers(26)).protocols(httpProtocol))
+  setUp(scn.inject(atOnceUsers(29)).protocols(httpProtocol))
 
   after {
+    //println("Simulation is finished!!!!!")
     priceTable
       .groupBy(_ ("date"))
       .map { case (dateStr, table) =>

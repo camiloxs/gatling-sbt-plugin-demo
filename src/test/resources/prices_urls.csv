@@ -9,7 +9,6 @@ order,symbol,url
 8,TRX,/quote/TRX-USD/history
 9,XRP,/quote/XRP-USD/history
 10,BNB,/quote/BNB-USD/history
-11,MATIC,/quote/MATIC-USD/history
 12,NEXO,/quote/NEXO-USD/history
 13,ROSE,/quote/ROSE-USD/history
 14,THETA,/quote/THETA-USD/history
@@ -20,8 +19,12 @@ order,symbol,url
 19,BEAM,/quote/BEAM28298-USD/history
 20,ATOM,/quote/ATOM-USD/history
 21,TON,/quote/TON11419-USD/history
-22,HTR,/quote/HTR-USD/history
-23,VLX,/quote/VLX-USD/history
-24,HBAR,/quote/HBAR-USD/history
-25,TAO,/quote/TAO22974-USD/history
-26,KUJI,/quote/KUJI-USD/history
+22,SAUCE,/quote/SAUCE-USD/history
+23,HBAR,/quote/HBAR-USD/history
+24,TAO,/quote/TAO22974-USD/history
+25,KUJI,/quote/KUJI-USD/history
+26,NMT,/quote/NMT29447-USD/history
+27,RON,/quote/RON14101-USD/history
+28,DOVU,/quote/DOVU-USD/history
+29,XLM,/quote/XLM-USD/history
+30,MATIC,/quote/MATIC-USD/history

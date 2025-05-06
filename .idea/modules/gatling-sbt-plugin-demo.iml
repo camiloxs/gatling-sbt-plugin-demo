@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="gatling-sbt-plugin-demo [file:/home/csilva/Code/GitHub/gatling/gatling-sbt-plugin-demo/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
+<module external.linked.project.id="gatling-sbt-plugin-demo [file:/home/camilo.silva@ve.sbp.com/Code/GitHub/gatling/gatling-sbt-plugin-demo/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
     <output url="file://$MODULE_DIR$/../../target/scala-2.13/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-2.13/test-classes" />
     <exclude-output />
@@ -8,14 +8,20 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/it/scala" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/gatling" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/global-logging" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/streams" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/task-temp-directory" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/test-reports" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: scala-sdk-2.13.8" level="project" />
+    <orderEntry type="module-library">
+      <library name="sbt: unmanaged-sources-and-docs">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.74.Final/netty-transport-native-epoll-4.1.74.Final-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntry type="library" scope="TEST" name="sbt: ch.qos.logback:logback-classic:1.2.10:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: ch.qos.logback:logback-core:1.2.10:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: com.aayushatharva.brotli4j:brotli4j:1.6.0:jar" level="project" />
@@ -112,14 +118,5 @@
     <orderEntry type="library" scope="TEST" name="sbt: org.slf4j:slf4j-api:1.7.36:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.typelevel:spire-macros_2.13:0.17.0:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.unbescape:unbescape:1.1.6.RELEASE:jar" level="project" />
-    <orderEntry type="module-library">
-      <library name="sbt: unmanaged-sources-and-docs">
-        <CLASSES />
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.cache/coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.74.Final/netty-transport-native-epoll-4.1.74.Final-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>

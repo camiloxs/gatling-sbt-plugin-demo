@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gatling-sbt-plugin-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/gatling-sbt-plugin-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gatling-sbt-plugin-demo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/gatling-sbt-plugin-demo-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gatling-sbt-plugin-demo.gatling-sbt-plugin-demo-build.iml" filepath="$PROJECT_DIR$/.idea/modules/gatling-sbt-plugin-demo.gatling-sbt-plugin-demo-build.iml" />
     </modules>
   </component>
 </project>
